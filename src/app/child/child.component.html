@@ -1,0 +1,32 @@
+ <h3>Child Components</h3>
+<hr>
+
+
+<h2>Name is <b style="color: red;">{{objdata.name}}</b> and is <b style="color: red;">{{objdata.mark}}</b> addition <b
+        style="color: red;">{{objdata.status}}</b></h2>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Mark</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of listarray">
+            <td>{{item.name}}</td>
+            <td>{{item.mark}}</td>
+            <td>{{item.status}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<br>
+<input type="text" class="form-control" #name>
+<br>
+<button type="button" class="btn btn-primary" (click)="dateupdateEvent.emit(name.value)">Button</button>
+
+<h2>Welcome to {{channelname}}</h2>
